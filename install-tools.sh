@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # File containing package names
-packages="packages.txt"
+packages="~/.dotfiles/packages.txt"
 
 # Install packages
 install_with() {
