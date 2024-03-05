@@ -1,6 +1,6 @@
 clone this repo in your home directory with
 ```bash
-git clone https://github.com/waseem-polus/.dotfiles.git
+git clone https://github.com/waseem-polus/dotfiles.git ~/.dotfiles
 ```
 
 install tools and packages with
