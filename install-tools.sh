@@ -1,31 +1,28 @@
-#!/bin/bash
-OS=$(uname)
+#!/bin/zsh
 
-# Custom file containing package names and versions
+# File containing package names
 packages="packages.txt"
 
-# Install packages using apt (for Linux)
-apt_install() {
-    while read -r package; do
-        sudo apt install -y "$package"
-    done < "$packages"
-}
+# Install packages
+install_with() {
+	local cmd="$1"
 
-# Install packages using brew (for MacOS)
-brew_install() {
-    while read -r package; do
-        brew install "$package"
-    done < "$packages"
+	while IFS= read -r line; do
+		if [[ $line != \#* ]]; then
+			eval $cmd "$line"
+		fi
+	done < "$packages"
 }
 
 # Check the operating system
-if [[ $(uname) == "Linux" ]]; then
-    echo "Installing for Linux using apt"
-    apt_install
-elif [[ $(uname) == "Darwin" ]]; then
-    echo "Installing for MacOS using brew"
-    brew_install
+OS=$(uname)
+if [[ $OS == "Linux" ]]; then
+	echo "Installing for Linux using apt"
+	install_with "sudo apt install -y"
+elif [[ $OS == "Darwin" ]]; then
+	echo "Installing for MacOS using brew"
+	install_with "brew install"
 else
-    echo "Unsupported operating system"
-    exit 1
+	echo "Unsupported operating system"
+	exit 1
 fi

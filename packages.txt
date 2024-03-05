@@ -1,6 +1,9 @@
-fzf
-make
-unzip
+# dev tools
 gcc
-ripgrep
+make
 neovim
+
+# utils
+fzf
+unzip
+ripgrep
