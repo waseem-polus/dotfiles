@@ -1,0 +1,7 @@
+[user]
+	email = waseem_imad@yahoo.com
+	name = waseem-polus
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
