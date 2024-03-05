@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # File containing package names
-packages="~/.dotfiles/packages.txt"
+packages="$HOME/.dotfiles/packages.txt"
 
 # Install packages
 install_with() {
@@ -9,6 +9,7 @@ install_with() {
 
 	while IFS= read -r line; do
 		if [[ $line != \#* ]]; then
+			echo "======================== $cmd \"$line\""
 			eval $cmd "$line"
 		fi
 	done < "$packages"
