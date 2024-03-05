@@ -1,0 +1,6 @@
+fzf
+make
+unzip
+gcc
+ripgrep
+neovim
