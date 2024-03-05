@@ -1,1 +1,14 @@
-# .dotfiles
+clone this repo in your home directory with
+```bash
+git clone https://github.com/waseem-polus/.dotfiles.git
+```
+
+install tools and packages with
+```bash
+source ~/.dotfiles/install-tools.sh
+```
+
+create symbolic links
+```bash
+source ~/.dotfiles/symlink.sh
+```
