@@ -8,3 +8,5 @@ ln -s ~/.dotfiles/git/.gitignore_global ~/git/.gitignore_global
 mkdir ~/.config/zsh/
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/.oh-my-zsh/ ~/.config/zsh/
+
+ln -s ~/.dotfiles/nvim ~/.config/
